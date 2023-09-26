@@ -1,0 +1,873 @@
+  @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+#whole{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 1500px;
+    margin: 0 auto;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textim1{
+    width: 200px;
+    height: 200px;
+    padding-bottom: 0.8rem;
+}
+.text{
+    font-size: 28px;
+    margin-left: -4rem;
+    font-family: "Be Vietnam Pro",sans-serif;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.items{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+
+}
+.items div{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Be Vietnam Pro",sans-serif;
+
+
+}
+.items div a{
+    color: black;
+    text-decoration:none ;
+}
+.items :hover{
+    transition: 1s;
+    font-weight: bold;
+}
+.bio{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.text1{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+}
+.bio1{
+    font-size: 27px;
+    font-weight: 400;
+    font-family: "Be Vietnam Pro",sans-serif;
+}
+
+.invisible{
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231, 231,231);
+    font-weight: bold;
+    position: absolute;
+     bottom: -13%;
+    transition: all 3s; 
+}
+.head1{
+    font-size: 35px;
+    font-weight: 500;
+    color: #343d68;
+}
+.head2{
+    font-size: 45px;
+    line-height:45px ;
+}
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+.bio1{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.bioimages{
+    position: relative;
+}
+.abs{
+    position: absolute;
+}
+.pic{
+    padding: 2.5rem;
+    filter: grayscale(1);
+    animation: scaling 4s linear infinite;
+}
+@keyframes scaling {
+    0%{
+        transform: scale(1);
+        filter: grayscale(0);
+        box-shadow: 2px 2px 8px black;
+
+        
+        
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(0);
+        box-shadow: 3px 3px 10px black;
+
+    }
+    
+}
+.im1{
+    z-index: 8;
+    bottom: -1rem;
+    left: 21rem;   
+    animation: img1 4s linear infinite; 
+}
+@keyframes img1 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+   100%{
+        transform: translateY(0);
+    }
+    
+}
+.im2{
+    z-index: 8;
+    bottom: 0rem;
+    left: 0rem;
+    animation: img2 4s linear infinite; 
+}
+@keyframes img2 {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform:rotateZ(80deg);
+    }
+   100%{
+        transform: rotateZ(0deg);
+    }
+}
+.im3{
+    z-index: 8;
+    top: -1rem;
+    right: -3rem;
+    animation: img3 4s linear infinite; 
+    
+}
+@keyframes img3 {
+    50%{
+        top: 3%;
+        right: 3%;
+
+    }
+}
+.projects-section{
+    background-color: rgb(231, 231, 231);
+}
+.heading{
+    font-size: 90px;
+    color: orangered;
+    text-align: center;
+    padding-top: 1rem;
+}
+.projects{
+    max-width: 1200px;
+    padding: 3rem 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8em;
+}
+
+#project1{
+    padding-right: 2rem;
+    background-image: url(block.jpg);
+    background-size: cover;
+
+
+}
+#project2{
+    padding-left: 2rem;
+    background-image: url(machine.png);
+    background-size: cover;
+    left: 190px;
+
+}
+#project3{
+    padding-left: 2rem;
+    background-image: url(port.png);
+    background-size: cover;
+    
+}
+#project4{
+    padding-left: 2rem;
+    background-image: url(drcare.png);
+    background-size: cover;
+    left: 190px;
+
+}
+.projectscard{
+    width: 80%;
+    height:500px;
+    box-shadow: 0 0 40px black;
+    position: relative;
+    left: -3rem;
+
+    
+    
+}
+
+
+.projectscard::after{
+    content: "";
+    background-color: #1f1f1f9a;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.projectscard::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s;
+    z-index: 8;
+    
+
+}
+.projectscard:hover::before{
+    transform: scale(1);
+
+}
+.projectscard:hover{
+    transition: all 0.5s;
+    transform: scale(1.15);
+
+}
+.projectscard .pushable:hover{
+    opacity: 1;
+}
+.projectscard .pushable.hover::before{
+    opacity: 0;
+}
+.projectscard .pushable::before{
+    position: absolute;
+    transition: all 0.5s;
+    transform: scaleX(0);
+}
+.projectscard .pushable::before{
+    position: absolute;
+    transition: all 0.5s;
+    transform: scaleX(1);
+}
+.projectscard:hover .pushable{
+    display: block;
+}
+
+
+
+
+.projectscard:hover .number{
+    display: block;
+
+}
+
+/*  */
+
+.projectscard:hover .button{
+    opacity: 1;
+}
+.button{
+    opacity: 0;
+    margin-top: 20px;
+}
+.button:hover{
+    opacity: 1;
+}
+/*  */
+
+
+
+
+.button{
+    display: block;
+    width: 200px;
+    height: 40px;
+    bottom: 1rem;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    
+  }
+  a{
+
+    text-decoration:none;
+    
+    }
+  
+  .button span{
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+
+  }
+  
+  .button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: orangered;
+    transition: all .35s;
+    text-decoration: none;
+
+  }
+  
+  .but:hover{
+    color: #fff;
+    text-decoration: none;
+
+  }
+  
+  .button:hover:after{
+    width: 100%;
+    text-decoration: none;
+
+  }
+
+
+
+
+
+.number{
+    position: absolute;
+    font-size: 250px;
+    font-weight: 400;
+    color: white;
+    right: -100px;
+    top: -100px;
+    z-index: 9;
+    display: none;
+}
+.numberl{
+    position: absolute;
+    font-size: 250px;
+    font-weight: 400;
+    color: white;
+    left: -90px;
+    top: -100px;
+    z-index: 9;
+    display: none;
+
+}
+.number::before{
+    position: absolute;
+    transition: all 0.5s;
+}
+.number::after{
+    position: absolute;
+    transition: all 0.5s;
+    
+}
+
+
+.procontent div{
+    z-index: 8;
+}
+
+.procontent{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    padding-left: 8rem;
+    gap: 2rem;
+    z-index: 8;
+    color: white;
+    font-size: 20px;
+    
+    
+}
+.procjectscard:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 5px;
+    
+
+    
+}
+.projectscard .btn .btn-white .btn-animated{
+    opacity: 0;
+}
+.projectscard .btn .btn-white {
+    opacity: 0;
+}
+.projectscard .btn{
+    opacity: 0;
+}
+.projectscard .btn .btn-white .btn-animated:hover{
+    opacity: 1;
+}
+.projectscard .btn .btn-white :hover{
+    opacity: 1;
+}
+.projectscard .btn:hover{
+    opacity: 1;
+}
+
+.projectheading1{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.subheading1{
+    width: 70%;
+    font-size: 26px;
+    font-style: italic;
+}
+.techarea{
+    display: flex;
+    position: relative;
+    padding: 8rem;
+    margin: 6rem auto;
+    gap: 30px;
+    box-shadow: 0px 0px 10px;
+
+}
+.techleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.techpic{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+}
+.skillsinvisible{
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231, 231,231);
+    font-weight: bold;
+    position: absolute;
+     bottom: -24%;
+     right: 2%;
+    transition: all 3s; 
+} 
+.techhead{
+    font-size: 50px;
+    font-style: bold;
+    color: orangered;
+    line-height: 50px;
+}
+.me{
+    text-align: center;
+}
+.techtext{
+    margin-top: 2rem;
+    width: 85%;
+    text-align: justify;
+    font-family:"Be Vietnam Pro",sans-serif;
+    
+}
+.techtext:hover{
+    transition: all 1s;
+    transform: scale(1.05);
+}
+.pictech{
+    opacity: 1;
+    position: relative;
+}
+.pictech:hover{
+    background-color: rgb(231, 231, 231);
+    opacity: 0;
+}
+.pictech1:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech2:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech3:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech4:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech5:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+
+.pictech6:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech7:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech8:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech9:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech10:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.pictech11:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+    box-shadow: 2px 2px 5px;
+    border-radius: 8px;
+}
+.contactme{
+    background-color: rgb(231, 231, 231);
+    padding-bottom: 0.4rem;
+}
+.contactbox{
+    width: 1200px;
+    background-color: rgb(231, 231, 231);
+    margin: 7.8rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    gap: 3px;
+    
+}
+
+.contacthead{
+    font-size: 3em ;
+    color: orangered;
+}
+.contactsub{
+    font-size: 1.5rem;
+    color: #343d68aa;
+}
+.invise{
+    user-select: none;
+    font-size: 3em;
+    color:#8f89e3;
+    font-weight: bold;
+    bottom: -1%;
+    transition: all 3s;
+    display: flex;
+
+}
+.invise:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    color: orangered;
+}
+
+.imagelinks:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    box-shadow: 3px 3px 8px; 
+    border-radius: 10px; 
+}
+
+
+
+
+
+.texti-box {
+    margin-left: 1px;
+   margin-top: 2px;
+   display: block;
+   block-size: 3rem;
+   width: 150px;
+   height: 50px;
+   opacity: 0;
+
+   
+   
+}
+.texti-box:hover{
+    opacity: 1;
+}
+.resume{
+    position: absolute;
+    display: flex;
+    color: white;
+    padding-top: 11px;
+    padding-left: 11px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+ }
+
+.btn:link,.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: block;
+    border-radius: 100px;
+    transition: all 1s;
+    position: absolute;
+    z-index: 8;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    position: absolute;
+
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-white {
+    position: absolute;
+    background-color: orangered;
+    color: #777;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+   
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -8;
+    transition: all 1s;
+}
+
+.btn-white::after {
+    background-color: rgb(231, 231, 231);
+    opacity: 1;
+
+
+}
+
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.projectscard .prob{
+    opacity: 0;
+}
+.projectscard .prob:hover{
+    opacity: 1;
+}
+.prob{
+    color: white;
+    font-size: larger;
+    position: absolute;
+    padding-left: 12px;
+    padding-top: 12px;
+    width: 150px;
+    height: 50px;
+}
+
+
+
+
+
+/* .button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: absolute;
+    overflow: hidden;
+    z-index: 8;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: orangered;
+      border-radius: 10rem;
+      z-index: 8;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: darken(orangered, 15%);
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: 8;
+    }
+    &:hover {
+      color: #fff;
+      &:before {
+        width: 100%;
+        z-index: 8;
+
+      }
+    }
+  }
+  
+ 
+  
+  .prob {
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-bottom: 2rem;
+    color: #777;
+    z-index: 8;
+  } */
+
+  
+/* 
+.buttoncon{
+    display: flex;
+    height: 50px;
+    width: 130px;
+    border-radius: 5px;
+    background-color: red;
+    padding: 0.8rem 2.3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    box-sizing: 5px;
+    z-index: 8;
+
+}
+
+.buttoncon:hover{
+    background-color: black;
+    transform-origin: left;
+
+}
+.button{
+    display: flex;
+    height: 50px;
+    width: 130px;
+    border-radius: 5px;
+    background-color: red;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    box-sizing: 5px;
+    z-index: 8;
+
+}
+
+.button:hover{
+    background-color: black;
+    transform-origin: left;
+
+} */
